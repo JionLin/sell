@@ -16,4 +16,11 @@ import org.springframework.stereotype.Component;
 public class ProjectUrlConfig {
 //	微信公众平台授权账号
 	private String wechatMpAuthorize;
+
+	/**
+	 * 微信开发平台授权
+	 */
+	private String wechatOpenAuthor;
+
+	private String sell;
 }

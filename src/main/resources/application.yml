@@ -8,6 +8,9 @@ spring:
     show-sql: true
   jackson:
     default-property-inclusion: non_null
+  redis:
+    host: 127.0.0.1
+    port: 6379
 server:
   servlet:
     context-path: /sell
@@ -25,3 +28,6 @@ wechat:
 
 projecturl:
   wechatMpAuthorize: http://ub2uvv.natappfree.cc
+  wechatOpenAuthor: http://ub2uvv.natappfree.cc
+  sell: http://localhost:8080
+

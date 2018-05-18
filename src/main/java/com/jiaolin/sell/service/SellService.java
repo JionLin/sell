@@ -1,6 +1,6 @@
 package com.jiaolin.sell.service;
 
-import com.jiaolin.sell.dataobject.SellInfo;
+import com.jiaolin.sell.dataobject.SellerInfo;
 
 /**
  * @Auther: Joinlin
@@ -10,5 +10,5 @@ import com.jiaolin.sell.dataobject.SellInfo;
  */
 public interface SellService {
 
-	SellInfo findByopenid(String openid);
+	SellerInfo findByopenid(String openid);
 }

@@ -1,6 +1,6 @@
 package com.jiaolin.sell.service.impl;
 
-import com.jiaolin.sell.dataobject.SellInfo;
+import com.jiaolin.sell.dataobject.SellerInfo;
 import com.jiaolin.sell.repository.SellInfoRepository;
 import com.jiaolin.sell.service.SellService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,7 +23,7 @@ public class SellServiceImpl implements SellService {
 	 * @return
 	 */
 	@Override
-	public SellInfo findByopenid(String openid) {
+	public SellerInfo findByopenid(String openid) {
 		return repository.findByOpenid(openid);
 	}
 }

@@ -10,7 +10,7 @@ import java.util.Date;
 @Entity
 @Data
 @DynamicUpdate
-public class SellInfo {
+public class SellerInfo {
 
 	@Id
 	private String id;
