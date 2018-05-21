@@ -80,8 +80,8 @@
 
 </div>
 
-<#--
-&lt;#&ndash;弹窗&ndash;&gt;
+
+<#--弹窗-->
 <div class="modal fade" id="myModal" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -102,7 +102,7 @@
     </div>
 </div>
 
-&lt;#&ndash;播放音乐&ndash;&gt;
+<#--播放音乐-->
 <audio id="notice" loop="loop">
     <source src="/sell/mp3/song.mp3" type="audio/mpeg" />
 </audio>
@@ -112,7 +112,9 @@
 <script>
     var websocket = null;
     if('WebSocket' in window) {
-        websocket = new WebSocket('ws://sell.natapp4.cc/sell/webSocket');
+//        websocket = new WebSocket('ws://sell.natapp4.cc/sell/webSocket'); gdjsyz.natappfree.cc
+//        websocket = new WebSocket('ws://localhost:8080/sell/webSocket');
+        websocket = new WebSocket('ws://gdjsyz.natappfree.cc/sell/webSocket');
     }else {
         alert('该浏览器不支持websocket!');
     }
@@ -142,7 +144,7 @@
     }
 
 </script>
--->
+
 
 </body>
 </html>

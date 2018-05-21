@@ -1,6 +1,5 @@
 package com.jiaolin.sell;
 
-import com.jiaolin.sell.constant.RedisConstant;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -19,5 +18,11 @@ public class SellApplicationTests {
 		String s = String.format("123_%s", token);
 		System.out.println("token:"+token);
 		System.out.println("s:"+s);
+		//String token = UUID.randomUUID().toString();
+
+		String format222 = String.format("123", token);
+		System.out.println(token);
+		System.out.println(format222);
 	}
+
 }

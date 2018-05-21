@@ -15,6 +15,7 @@ import com.jiaolin.sell.repository.OrderMasterRepository;
 import com.jiaolin.sell.service.OrderService;
 import com.jiaolin.sell.service.PayService;
 import com.jiaolin.sell.service.ProductService;
+import com.jiaolin.sell.service.WebScoket;
 import com.jiaolin.sell.utils.KeyUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeanUtils;
@@ -47,6 +48,10 @@ public class OrderServiceImpl implements OrderService {
 
 	@Autowired
 	private PayService payService;
+
+	@Autowired
+	private WebScoket webScoket;
+
 	@Override
 	@Transactional
 	public OrderDTO create(OrderDTO orderDTO) {
