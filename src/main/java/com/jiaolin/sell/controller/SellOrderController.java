@@ -117,5 +117,4 @@ public class SellOrderController {
         map.put("url", "/sell/seller/order/list");
         return new ModelAndView("common/success", map);
     }
-
 }
