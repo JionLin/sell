@@ -98,6 +98,7 @@ public class OrderServiceImpl implements OrderService {
 		List<CartDTO> cartDTOList = orderDetailList.stream()
 				.map(e -> new CartDTO(e.getProductId(), e.getProductQuantity())).collect(Collectors.toList());
 		productService.decreaseStock(cartDTOList);
+
 		webScoket.sendMessage(orderDTO.getOrderId());
 		return orderDTO;
 	}

@@ -8,7 +8,6 @@ import javax.websocket.OnMessage;
 import javax.websocket.OnOpen;
 import javax.websocket.Session;
 import javax.websocket.server.ServerEndpoint;
-import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.CopyOnWriteArraySet;
 
 @Component
@@ -37,7 +36,7 @@ public class WebScoket {
 
     @OnMessage
     public void onMessage(String message) {
-        log.info("[webScoket消息]收到客户端发来的消息{}", message);
+        log.info("[webScoket消息]收到客户端发来的消息={}", message);
     }
 
     public void sendMessage(String message) {

@@ -4,10 +4,10 @@
 <body>
 <div id="wrapper" class="toggled">
 
-<#--边栏sidebar-->
-<#include "../common/nav.ftl">
+    <#--边栏sidebar-->
+    <#include "../common/nav.ftl">
 
-<#--主要内容content-->
+    <#--主要内容content-->
     <div id="page-content-wrapper">
         <div class="container-fluid">
             <div class="row clearfix">
@@ -80,7 +80,6 @@
 
 </div>
 
-
 <#--弹窗-->
 <div class="modal fade" id="myModal" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
@@ -112,10 +111,8 @@
 <script>
     var websocket = null;
     if('WebSocket' in window) {
-//        websocket = new WebSocket('ws://sell.natapp4.cc/sell/webSocket'); gdjsyz.natappfree.cc
+//        websocket = new WebSocket('ws://sell.natapp4.cc/sell/webSocket');
         websocket = new WebSocket('ws://127.0.0.1:8080/sell/webSocket');
-//        websocket = new WebSocket('ws://gdjsyz.natappfree.cc/sell/webSocket');
-        alert('webScoket目录正常')
     }else {
         alert('该浏览器不支持websocket!');
     }
@@ -145,7 +142,6 @@
     }
 
 </script>
-
 
 </body>
 </html>
