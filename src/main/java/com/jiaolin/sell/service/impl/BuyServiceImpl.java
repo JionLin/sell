@@ -21,8 +21,6 @@ import org.springframework.stereotype.Service;
 public class BuyServiceImpl implements BuyService {
     @Autowired
     private OrderService orderService;
-    @Autowired
-    private WebScoket webScoket;
 
     @Override
     public OrderDTO findOrderOne(String openId, String orderId) {
@@ -37,7 +35,6 @@ public class BuyServiceImpl implements BuyService {
             log.error("[取消订单],该订单不存在");
             throw new SellException(ResultEnum.ORDER_NOT_EXIST);
         }
-        webScoket.sendMessage("取消订单成功");
         return orderService.cancle(orderDTO);
     }
 

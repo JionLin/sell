@@ -9,6 +9,7 @@ import javax.websocket.OnOpen;
 import javax.websocket.Session;
 import javax.websocket.server.ServerEndpoint;
 import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.concurrent.CopyOnWriteArraySet;
 
 @Component
 @ServerEndpoint("/webSocket")
@@ -16,7 +17,7 @@ import java.util.concurrent.CopyOnWriteArrayList;
 public class WebScoket {
     private Session session;
 
-    private static CopyOnWriteArrayList<WebScoket> webScoketSet = new CopyOnWriteArrayList();
+    private static CopyOnWriteArraySet<WebScoket> webScoketSet = new CopyOnWriteArraySet();
 
     /**
      * 打开webscoket
@@ -36,7 +37,7 @@ public class WebScoket {
 
     @OnMessage
     public void onMessage(String message) {
-        log.info("[webScoket消息]收到客户端发来的消息", message);
+        log.info("[webScoket消息]收到客户端发来的消息{}", message);
     }
 
     public void sendMessage(String message) {

@@ -97,8 +97,8 @@ public class OrderServiceImpl implements OrderService {
 		//4进行库存的减少   CartDTO里面包含数量和商品的id,这里面orderDTO.getOrderDetailList()有包括这些,
 		List<CartDTO> cartDTOList = orderDetailList.stream()
 				.map(e -> new CartDTO(e.getProductId(), e.getProductQuantity())).collect(Collectors.toList());
-
 		productService.decreaseStock(cartDTOList);
+		webScoket.sendMessage(orderDTO.getOrderId());
 		return orderDTO;
 	}
 
